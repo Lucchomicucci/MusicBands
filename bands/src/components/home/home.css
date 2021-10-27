@@ -1,0 +1,9 @@
+.filter{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.dropdown{
+    display: inline-block;
+    margin: 0.5rem
+}

@@ -1,5 +1,6 @@
 import { useCallback } from "react"
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 import app from "../../firebase/client";
 
     export const SignUp =({ history })=>{
@@ -18,18 +19,18 @@ import app from "../../firebase/client";
     
     return(
         <>
-        <div>
-            <h1>Sign Up</h1>
-            <form onSubmit={handleSignUp}>
-                <label>Email
-                    <input type="email" name="email" placeholder="Email" />
-                </label>
-                <label>Password
-                    <input type="password" name="password" placeholder="Password" />
-                </label>
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
+        <div className="container card text-center">
+                <form className="formLog" onSubmit={handleSignUp}>
+                    <h1>Sign Up</h1>
+                    <label>Email:
+                        <input type="email" name="email" />
+                    </label>
+                    <label>Password:
+                        <input type="password" name="password" />
+                    </label>
+                    <button type="submit" className="btn btn-secondary btn-log">Sign Up</button>
+                </form>
+            </div>
         </>
     )
 }

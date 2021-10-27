@@ -20,8 +20,10 @@ export const ListBands = () =>{
 
     return(
         <>
+        <div className="filter">
         <FilterGenre />
         <FilterBands />
+        </div>
         {   !!bands ?
             bandsToShow.map( (el, index) => {
                 return <CardComponent el={el} key={index} />

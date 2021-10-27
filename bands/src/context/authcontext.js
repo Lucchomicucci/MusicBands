@@ -8,6 +8,7 @@ export const AuthProvider = ({children}) =>{
     const [bands, setBands] = useState([])
     const [genreFilter, setGenreFilter] = useState();
     const [bandsToShow, setBandsToShow] = useState(bands);
+    const [albums, setAlbums] = useState();
 
     useEffect(()=>{
         app.auth().onAuthStateChanged(setCurrentUser);
@@ -19,13 +20,17 @@ export const AuthProvider = ({children}) =>{
         fetch("https://my-json-server.typicode.com/improvein/dev-challenge/genre")
         .then(response => response.json())
         .then(data => setGenreFilter(data))
+
+        fetch("https://my-json-server.typicode.com/improvein/dev-challenge/albums")
+        .then(response => response.json())
+        .then(data => setAlbums(data))
         
     }, [])
     
     return(
         <AuthContext.Provider
         value={{
-            currentUser, bands, genreFilter, bandsToShow, setBandsToShow
+            currentUser, bands, genreFilter, bandsToShow, setBandsToShow, albums
         }}
         >
             {children}

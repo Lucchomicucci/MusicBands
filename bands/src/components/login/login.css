@@ -1,0 +1,47 @@
+label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    text-align: center;
+    min-width: 20rem;
+    width: 40rem;
+    min-height: 25rem;
+    -webkit-box-shadow: 5px 9px 5px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 5px 9px 5px 0px rgba(0,0,0,0.44);
+    box-shadow: 5px 9px 5px 0px rgba(0,0,0,0.44);
+    color: white;
+}
+
+input{
+    min-width: 10rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.card{
+    margin-top: 10%;
+    min-width: 5rem;
+    background-color: #4b4b4b;
+}
+
+.formLog{
+    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.divButtons{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-log{
+    margin-top: 0.5rem;
+    width: 10rem;
+}
