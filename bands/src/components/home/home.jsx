@@ -1,8 +1,6 @@
-import { useContext } from "react";
-import { AuthContext } from "../../context/authcontext";
-import app from "../../firebase/client"
 import { FilterGenre } from "../filter/filter";
 import { FilterBands } from "../filterBands/filterBands";
+import { LogoutButton } from "../logoutButton/logoutButton";
 
 export const Home = () => {
     return (
@@ -14,7 +12,7 @@ export const Home = () => {
             </div>
             <FilterGenre />
             <FilterBands />
-            <button onClick={() => app.auth().signOut()}>Sing out</button>
+            <LogoutButton />
         </>
     )
 }

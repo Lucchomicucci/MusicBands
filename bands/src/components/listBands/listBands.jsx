@@ -4,6 +4,7 @@ import { AuthContext } from "../../context/authcontext";
 import { CardComponent } from "../card/card";
 import { FilterGenre } from "../filter/filter";
 import { FilterBands } from "../filterBands/filterBands";
+import { LogoutButton } from "../logoutButton/logoutButton";
 
 export const ListBands = () =>{
     const {bands} = useContext(AuthContext)
@@ -27,6 +28,7 @@ export const ListBands = () =>{
             })
             : <h1>Cargando</h1>
         }
+        <LogoutButton />
         </>
     )
 }

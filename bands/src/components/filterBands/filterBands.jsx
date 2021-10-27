@@ -5,7 +5,6 @@ import { AuthContext } from "../../context/authcontext";
 export const FilterBands = () =>{
 
     const {bands} = useContext(AuthContext)
-    console.log(bands)
 
     return(
         <div className="dropdown">

@@ -7,6 +7,7 @@ import { SignUp } from './components/signup/signup'
 import { PrivateRoute } from "./components/privateRoute/privateRoute";
 import { ListBands } from './components/listBands/listBands';
 import { ListBandsByName } from './components/listBandsByName/listBandsByName';
+import { InforBand } from './components/infoBand/infoBand';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/signup" component={SignUp}/>
             <Route exact path="/genre/:genre" component={ListBands} />
             <Route exact path="/band/:bandName" component={ListBandsByName} />
+            <Route exact path="/band/infoband/:infoband" component={InforBand} />
           </Switch>
         </BrowserRouter>
       </AuthProvider>
