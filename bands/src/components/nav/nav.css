@@ -10,9 +10,6 @@
 
 nav{
     text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.95); */
-    /* background-image: linear-gradient(to top, #192a56, #1c2e51, #22314c, #283446, #2f3640); */
-    /* background-image: linear-gradient(to top, #718093, #606d7d, #4f5a68, #3f4754, #2f3640); */
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
     margin-bottom: 1rem;
