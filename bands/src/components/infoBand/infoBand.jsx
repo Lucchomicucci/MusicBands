@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router";
-import { AuthContext } from "../../context/authcontext"
+import { AuthContext } from "../../context/authcontext";
+import './infoBand.css'
+import imagen from './youtube.png'
 
 export const InfoBand = (props) => {
     const [loading, setLoading] = useState(true);
@@ -27,8 +29,8 @@ export const InfoBand = (props) => {
 
     return (
         <>
-
             {!loading ?
+            
                 <div class="card resultadobusqueda">
                     <div class="card-body">
                         <h4 class="card-title">{bandInfo.name}</h4>
@@ -48,10 +50,15 @@ export const InfoBand = (props) => {
                     {
                         albumsToShow.map( el =>{
                             return(
-                                <li>Name: {el.name} Year: {el.year} </li>
+                                <li>{el.name} || {el.year} </li>
                             )
                         })
                     }
+                <a target="_blank" href={`https://www.youtube.com/results?search_query=${bandInfo.name}`}>
+                    <div className="youtube">
+                    <img src={imagen} />
+                    </div>
+                </a>
                 </div>
                 :
                 <div class="spinner-border" role="status">

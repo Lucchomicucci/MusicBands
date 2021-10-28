@@ -4,6 +4,7 @@ import { AuthContext } from "../../context/authcontext";
 import { CardComponent } from "../card/card";
 import { FilterGenre } from "../filter/filter";
 import { FilterBands } from "../filterBands/filterBands";
+import { Home } from "../home/home";
 import { LogoutButton } from "../logoutButton/logoutButton";
 
 export const ListBands = () =>{
@@ -21,8 +22,7 @@ export const ListBands = () =>{
     return(
         <>
         <div className="filter">
-        <FilterGenre />
-        <FilterBands />
+        <Home headerName="Results" />
         </div>
         {   !!bands ?
             bandsToShow.map( (el, index) => {
@@ -30,7 +30,6 @@ export const ListBands = () =>{
             })
             : <h1>Cargando</h1>
         }
-        <LogoutButton />
         </>
     )
 }

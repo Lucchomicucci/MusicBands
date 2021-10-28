@@ -12,7 +12,7 @@ label{
     -webkit-box-shadow: 5px 9px 5px 0px rgba(0,0,0,0.44);
     -moz-box-shadow: 5px 9px 5px 0px rgba(0,0,0,0.44);
     box-shadow: 5px 9px 5px 0px rgba(0,0,0,0.44);
-    color: white;
+    color: black;
 }
 
 input{
@@ -44,4 +44,8 @@ input{
 .btn-log{
     margin-top: 0.5rem;
     width: 10rem;
+}
+
+.loginTitle{
+    background: none!important;
 }

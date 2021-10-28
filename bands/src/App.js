@@ -16,7 +16,7 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Switch>
-            <PrivateRoute exact path="/" component={Home} />
+            <PrivateRoute exact path="/"> <Home headerName="Welcome"/></PrivateRoute>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/signup" component={SignUp}/>
             <PrivateRoute exact path="/genre/:genre" component={ListBands} />

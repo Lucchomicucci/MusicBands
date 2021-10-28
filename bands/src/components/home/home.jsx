@@ -3,15 +3,19 @@ import { FilterBands } from "../filterBands/filterBands";
 import { LogoutButton } from "../logoutButton/logoutButton";
 import './home.css'
 
-export const Home = () => {
+export const Home = (props) => {
+
     return (
-        <>
-            <h1>Welcome</h1>
+        <>  
+            <nav>
+            <h1>{props.headerName}</h1>
+            <LogoutButton />
+            </nav>
             <div className="filter">
                 <FilterGenre />
                 <FilterBands />
             </div>
-                <LogoutButton />
+            
         </>
     )
 }

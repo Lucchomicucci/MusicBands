@@ -1,7 +1,23 @@
 .resultadobusqueda{
-    background-color: #920d0dd1;
-    max-width: 50rem;
+    /* background-image: linear-gradient(to top, #192a56, #1c2e51, #22314c, #283446, #2f3640); */
+        background-image: linear-gradient(to top, #718093, #606d7d, #4f5a68, #3f4754, #2f3640);
+    max-width: 25rem;
     text-align: center;
     margin: 2rem auto;
     color: white;
+    transition: ease 0.5s all;
+    border-radius: 3rem;
+    padding: 1rem;
 }
+
+.resultadobusqueda:hover{
+    -webkit-box-shadow: 0px 2px 16px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 16px 3px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 16px 3px rgba(0,0,0,0.5);
+    transition: ease 0.5s all;
+}
+
+li{
+    list-style: none;
+}
+
