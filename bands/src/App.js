@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Home } from './components/home/home';
+import { Nav } from './components/nav/nav';
 import { AuthProvider } from "./context/authcontext";
 import { Login } from './components/login/login'
 import { SignUp } from './components/signup/signup'
@@ -8,6 +8,7 @@ import { ListBands } from './components/listBands/listBands';
 import { ListBandsByName } from './components/listBandsByName/listBandsByName';
 import { InfoBand } from './components/infoBand/infoBand';
 import './App.css'
+import { Home } from './components/home/home';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Switch>
-            <PrivateRoute exact path="/"> <Home headerName="Welcome"/></PrivateRoute>
+            <PrivateRoute exact path="/" component={Home}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/signup" component={SignUp}/>
             <PrivateRoute exact path="/genre/:genre" component={ListBands} />

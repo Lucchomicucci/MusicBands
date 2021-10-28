@@ -1,21 +1,24 @@
-import { FilterGenre } from "../filter/filter";
-import { FilterBands } from "../filterBands/filterBands";
-import { LogoutButton } from "../logoutButton/logoutButton";
-import './home.css'
+import { useContext, useEffect, useState } from "react"
+import { AuthContext } from "../../context/authcontext"
+import { Nav } from "../nav/nav"
+import { CardComponent } from "../card/card"
 
-export const Home = (props) => {
+export const Home = () =>{
+    const {bands} = useContext(AuthContext)
+    const [allBands, setAllBands] = useState();
+    useEffect(()=>{ 
+        setAllBands(bands)
+    }, [])
 
-    return (
-        <>  
-            <nav>
-            <h1>{props.headerName}</h1>
-            <LogoutButton />
-            </nav>
-            <div className="filter">
-                <FilterGenre />
-                <FilterBands />
-            </div>
-            
+    return(
+        <>
+        <Nav headerName="Welcome"/>
+        {   !!allBands ?
+            allBands.map( (el, index) => {
+                return <CardComponent el={el} key={index} />
+            })
+            : <h1>Cargando</h1>
+        }
         </>
     )
 }

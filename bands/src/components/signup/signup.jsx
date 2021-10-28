@@ -1,6 +1,5 @@
 import { useCallback } from "react"
 import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
 import app from "../../firebase/client";
 
     export const SignUp =({ history })=>{

@@ -1,7 +1,7 @@
 import { useContext} from "react"
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/authcontext";
-import '../home/home.css'
+import '../nav/nav.css'
 
 export const FilterBands = () =>{
 

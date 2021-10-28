@@ -2,8 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router"
 import { AuthContext } from "../../context/authcontext";
 import { CardComponent } from "../card/card";
-import { Home } from "../home/home";
-import { LogoutButton } from "../logoutButton/logoutButton";
+import { Nav } from "../nav/nav";
 
 export const ListBandsByName = () =>{
     const {bands} = useContext(AuthContext)
@@ -20,7 +19,7 @@ export const ListBandsByName = () =>{
     return(
         <>
         <div className="filter">
-        <Home headerName="Results" />
+        <Nav headerName="Results" />
         </div>
         {   !!bands ?
             bandsToShow.map( (el, index) => {
