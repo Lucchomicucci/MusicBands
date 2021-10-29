@@ -2,23 +2,30 @@ import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "../../context/authcontext"
 import { Nav } from "../nav/nav"
 import { CardComponent } from "../card/card"
+import './home.css'
 
-export const Home = () =>{
-    const {bands} = useContext(AuthContext)
+export const Home = () => {
+    const { bands } = useContext(AuthContext)
     const [allBands, setAllBands] = useState();
-    useEffect(()=>{ 
+
+    useEffect(() => {
         setAllBands(bands)
     }, [])
 
-    return(
+    return (
         <>
-        <Nav headerName="Welcome"/>
-        {   !!allBands ?
-            allBands.map( (el, index) => {
-                return <CardComponent el={el} key={index} />
-            })
-            : <h1>Cargando</h1>
-        }
+            <Nav headerName="Welcome" />
+            <div className="homeCards">
+                {!!allBands ?
+                    allBands.map((el, index) => {
+                        return <CardComponent el={el} key={index} />
+                    })
+                    :
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden"></span>
+                    </div>
+                }
+            </div>
         </>
     )
 }

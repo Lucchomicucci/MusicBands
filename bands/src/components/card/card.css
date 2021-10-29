@@ -3,6 +3,7 @@
         /* background-image: linear-gradient(to top, #718093, #606d7d, #4f5a68, #3f4754, #2f3640); */
     background-image: linear-gradient(to bottom, #e1b12c, #d2a322, #c39418, #b5870d, #a67900);
     max-width: 25rem;
+    min-width: 20rem;
     text-align: center;
     margin: 2rem auto;
     color: white;

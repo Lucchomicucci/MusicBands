@@ -15,10 +15,13 @@ export const AuthComponent = () => {
     return (
         <div>
             <label htmlFor="email">Correo electronico</label>
-            <input type="email" id="email" onChange={(ev) => setEmail(ev.target.value)}/>
+            <input type="email" id="email"
+                onChange={(ev) => setEmail(ev.target.value)}/>
             <label htmlFor="password">Contraseña</label>
-            <input type="password" id="password" onChange={(ev) => setPassword(ev.target.value)}/>
-            <button onClick={submit}>Iniciar sesion</button>
+            <input type="password" id="password" 
+                onChange={(ev) => setPassword(ev.target.value)}/>
+            <button 
+                onClick={submit}>Iniciar sesion</button>
         </div>
     )
 }

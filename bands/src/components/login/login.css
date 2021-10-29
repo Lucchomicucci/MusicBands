@@ -49,3 +49,7 @@ input{
 .loginTitle{
     background: none!important;
 }
+
+.logInContainer{
+    border-radius: 4rem;
+}

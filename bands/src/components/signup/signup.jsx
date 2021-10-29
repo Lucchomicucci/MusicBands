@@ -18,8 +18,9 @@ import app from "../../firebase/client";
     
     return(
         <>
-        <div className="container card text-center">
-                <form className="formLog" onSubmit={handleSignUp}>
+        <div className="container card text-center logInContainer">
+                <form className="formLog" 
+                    onSubmit={handleSignUp}>
                     <h1>Sign Up</h1>
                     <label>Email:
                         <input type="email" name="email" />

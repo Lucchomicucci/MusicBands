@@ -1,3 +1,4 @@
+import { CleanFilter } from "../cleanFilter/cleanFilter";
 import { FilterGenre } from "../filter/filter";
 import { FilterBands } from "../filterBands/filterBands";
 import { LogoutButton } from "../logoutButton/logoutButton";
@@ -8,12 +9,13 @@ export const Nav = (props) => {
     return (
         <>  
             <nav>
-            <h1>{props.headerName}</h1>
-            <LogoutButton />
+                <h1>{props.headerName}</h1>
+                <LogoutButton />
             </nav>
             <div className="filter">
                 <FilterGenre />
                 <FilterBands />
+                <CleanFilter />
             </div>
             
         </>

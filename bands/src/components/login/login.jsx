@@ -30,8 +30,9 @@ export const Login = ({ history }) => {
 
     return (
         <>
-            <div className="container card text-center">
-                <form className="formLog" onSubmit={handleLogin}>
+            <div className="container card text-center logInContainer">
+                <form className="formLog" 
+                    onSubmit={handleLogin}>
                     <h1 className="loginTitle">Log in</h1>
                     <label>Email:
                         <input type="email" name="email"/>

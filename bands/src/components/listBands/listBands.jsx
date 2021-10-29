@@ -4,29 +4,32 @@ import { AuthContext } from "../../context/authcontext";
 import { CardComponent } from "../card/card";
 import { Nav } from '../nav/nav'
 
-export const ListBands = () =>{
-    const {bands} = useContext(AuthContext)
+export const ListBands = () => {
+    const { bands } = useContext(AuthContext)
     const [bandsToShow, setBandsToShow] = useState(bands);
-    let {genre} = useParams();
+    let { genre } = useParams();
 
-    useEffect(() =>{
-        const filterBands = bands.filter( element => element.genreCode == genre)
-        !genre 
-        ? setBandsToShow(bands)
-        : setBandsToShow(filterBands)
+    useEffect(() => {
+        const filterBands = bands.filter(element => element.genreCode == genre)
+        !genre
+            ? setBandsToShow(bands)
+            : setBandsToShow(filterBands)
     }, [genre])
 
-    return(
+    return (
         <>
-        <div className="filter">
-        <Nav headerName="Results" />
-        </div>
-        {   !!bands ?
-            bandsToShow.map( (el, index) => {
-                return <CardComponent el={el} key={index} />
-            })
-            : <h1>Cargando</h1>
-        }
+            <div className="filter">
+                <Nav headerName="Results" />
+            </div>
+            {!!bands ?
+                bandsToShow.map((el, index) => {
+                    return <CardComponent el={el} key={index} />
+                })
+                :
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden"></span>
+                </div>
+            }
         </>
     )
 }
